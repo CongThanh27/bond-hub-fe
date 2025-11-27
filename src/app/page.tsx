@@ -5,7 +5,7 @@ export default function Home() {
     <div className="min-h-screen flex flex-col bg-white">
       {/* Header */}
       <header className="w-full py-4 px-6 md:px-12 flex justify-between items-center">
-        <div className="text-2xl font-bold">Vodka</div>
+        <div className="text-2xl font-bold">ZaloLite</div>
         <div className="flex space-x-4">
           <Link href="/login">
             <span className="text-black hover:text-gray-700 cursor-pointer">

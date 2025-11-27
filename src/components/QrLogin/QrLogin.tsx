@@ -528,8 +528,8 @@ export default function QrLogin() {
             Quét mã để đăng nhập
           </p>
           <p className="text-sm text-gray-500 px-4">
-            Mở ứng dụng Vodka trên điện thoại và quét mã này để đăng nhập nhanh
-            chóng
+            Mở ứng dụng ZaloLite trên điện thoại và quét mã này để đăng nhập
+            nhanh chóng
           </p>
         </div>
       </div>

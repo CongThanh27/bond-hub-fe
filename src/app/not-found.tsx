@@ -13,7 +13,7 @@ export default function NotFound() {
             src="/logo.png"
             width={200}
             height={80}
-            alt="Vodka Logo"
+            alt="ZaloLite Logo"
             className="w-[200px] h-auto mx-auto"
           />
         </div>

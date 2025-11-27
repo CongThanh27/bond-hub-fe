@@ -11,9 +11,9 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "Vodka",
+  title: "ZaloLite",
   description:
-    "Vodka is a community for sharing and connecting. Chat, share, and connect with others.",
+    "ZaloLite is a community for sharing and connecting. Chat, share, and connect with others.",
 };
 
 export default function RootLayout({
@@ -28,7 +28,7 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
       <body className={`${inter.className} force-pointer-events`}>
-        <DocumentTitle title="Vodka" />
+        <DocumentTitle title="ZaloLite" />
         <Toaster position="top-center" richColors />
         <AuthProvider>
           <SocketChatProvider>
