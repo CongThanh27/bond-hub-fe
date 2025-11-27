@@ -13,7 +13,7 @@ const Loading = memo(function Loading() {
             src="/logo.png"
             width={200}
             height={80}
-            alt="Vodka Logo"
+            alt="ZaloLite Logo"
             className="w-[200px] h-auto"
             priority
             loading="eager"
@@ -49,7 +49,7 @@ export const LoadingWithMessage = memo(function LoadingWithMessage({
             src="/logo.png"
             width={200}
             height={80}
-            alt="Vodka Logo"
+            alt="ZaloLite Logo"
             className="w-[200px] h-auto"
             priority
             loading="eager"

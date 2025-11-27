@@ -1,6 +1,6 @@
-# Vodka - Modern Messaging Application
+# ZaloLite - Modern Messaging Application
 
-Vodka is a modern real-time messaging application built with Next.js, similar to Zalo, that enables users to connect, chat, and share moments with friends and family.
+ZaloLite is a modern real-time messaging application built with Next.js, similar to Zalo, that enables users to connect, chat, and share moments with friends and family.
 
 ## Features
 
@@ -28,7 +28,7 @@ Vodka is a modern real-time messaging application built with Next.js, similar to
 ### Landing Page
 
 ![Landing Page Screenshot](/public/screenshots/landing.jpg)
-_Welcome page showcasing Vodka's features and benefits_
+_Welcome page showcasing ZaloLite's features and benefits_
 
 ### Authentication
 

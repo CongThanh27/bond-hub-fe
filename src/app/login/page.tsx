@@ -54,13 +54,13 @@ export default function LoginPage() {
             src="/logo.png"
             width={300}
             height={100}
-            alt="Vodka Logo"
+            alt="ZaloLite Logo"
             className="w-[200px] sm:w-[250px] md:w-[300px] h-auto"
             priority
             loading="eager"
           />
           <h2 className="text-center text-sm sm:text-base md:text-lg text-gray-600 whitespace-normal mt-2 max-w-[300px] mx-auto">
-            Đăng nhập tài khoản Vodka để kết nối với ứng dụng Vodka Web
+            Đăng nhập tài khoản ZaloLite để kết nối với ứng dụng ZaloLite Web
           </h2>
         </div>
         <div className="bg-white shadow-lg rounded-[30px] flex flex-col items-center gap-4 relative w-full h-auto min-h-[400px] sm:min-h-[523px] overflow-auto no-scrollbar">
