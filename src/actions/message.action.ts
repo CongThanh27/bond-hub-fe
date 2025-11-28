@@ -86,7 +86,7 @@ export async function sendMediaMessage(
 
     const response = await axiosInstance.post("/messages/user", formData, {
       headers: {
-        "Content-Type": "multipart/form-data",
+        // "Content-Type": "multipart/form-data",
       },
     });
 
@@ -128,7 +128,7 @@ export async function uploadMediaFiles(
 
     const response = await axiosInstance.post("/messages/media", formData, {
       headers: {
-        "Content-Type": "multipart/form-data",
+        // "Content-Type": "multipart/form-data",
       },
     });
 
@@ -461,7 +461,7 @@ export async function sendGroupMediaMessage(
 
     const response = await axiosInstance.post("/messages/group", formData, {
       headers: {
-        "Content-Type": "multipart/form-data",
+        // "Content-Type": "multipart/form-data",
       },
     });
 

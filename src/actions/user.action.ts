@@ -332,7 +332,7 @@ export async function updateProfilePicture(file: File) {
       formData,
       {
         headers: {
-          "Content-Type": "multipart/form-data",
+          // "Content-Type": "multipart/form-data",
         },
       },
     );

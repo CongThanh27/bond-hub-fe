@@ -26,7 +26,7 @@ interface RefreshTokenResponse {
 const createBaseAxiosInstance = (): AxiosInstance => {
   return axios.create({
     baseURL: NEXT_PUBLIC_BACKEND_URL,
-    headers: { "Content-Type": "application/json" },
+    // headers: { "Content-Type": "application/json" },
     timeout: 15000, // 15 seconds timeout
   });
 };

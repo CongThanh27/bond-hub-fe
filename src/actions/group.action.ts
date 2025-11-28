@@ -593,7 +593,7 @@ export async function updateGroupAvatar(groupId: string, formData: FormData) {
       formData,
       {
         headers: {
-          "Content-Type": "multipart/form-data",
+          // "Content-Type": "multipart/form-data",
         },
       },
     );
