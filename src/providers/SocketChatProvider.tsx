@@ -29,6 +29,9 @@ const SocketContext = createContext<SocketContextType>({
   isConnected: false,
 });
 
+
+
+
 // Hook để sử dụng socket trong các component
 export const useSocket = () => useContext(SocketContext);
 
