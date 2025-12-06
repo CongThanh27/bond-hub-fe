@@ -66,7 +66,7 @@ export function SocketChatProvider({ children }: SocketProviderProps) {
     }
 
     // Tạo kết nối socket đến namespace message
-    const socketUrl = `${process.env.NEXT_PUBLIC_SOCKET_URL || "http://localhost:3000"}/message`;
+    const socketUrl = `${process.env.NEXT_PUBLIC_SOCKET_URL || "https://zalo-like.vercel.app"}/message`;
     console.log(`Connecting to message socket at ${socketUrl}`);
 
     // Thêm token vào auth để đảm bảo xác thực đúng

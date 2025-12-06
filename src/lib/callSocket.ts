@@ -52,7 +52,7 @@ export const initCallSocket = (token: string): Socket | null => {
 
   // Check environment variables and log them for debugging
   const baseSocketUrl =
-    process.env.NEXT_PUBLIC_SOCKET_URL || "http://localhost:3000";
+    process.env.NEXT_PUBLIC_SOCKET_URL || "https://zalo-like.vercel.app";
   const callSocketUrl = `${baseSocketUrl}/call`;
 
   console.log(`[WEBRTC] Connecting to call socket at ${callSocketUrl}`);

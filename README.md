@@ -119,7 +119,7 @@ yarn dev
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the application.
+Open [https://zalo-like.vercel.app](https://zalo-like.vercel.app) with your browser to see the application.
 
 ## Project Structure
 

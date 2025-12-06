@@ -77,7 +77,7 @@ export const useSocketConnection = (isAuthenticated: boolean = false) => {
     // Tạo kết nối socket mới với các tùy chọn tối ưu
     try {
       const newSocket = io(
-        process.env.NEXT_PUBLIC_SOCKET_URL || "http://localhost:3000",
+        process.env.NEXT_PUBLIC_SOCKET_URL || "https://zalo-like.vercel.app",
         {
           auth: { token: accessToken },
           reconnection: true,
