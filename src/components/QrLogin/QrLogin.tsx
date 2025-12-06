@@ -70,6 +70,10 @@ export default function QrLogin() {
   );
   const { setAuth, setTokens } = useAuthStore();
   const router = useRouter();
+  const socketBaseUrl =
+    process.env.NEXT_PUBLIC_SOCKET_URL ||
+    process.env.NEXT_PUBLIC_WS_URL ||
+    "http://localhost:3000";
 
   // Handle responsive QR code size
   useEffect(() => {
@@ -77,6 +81,8 @@ export default function QrLogin() {
       setQrCodeSize(window.innerWidth < 640 ? 160 : 200);
     };
 
+
+    
     // Set initial size
     handleResize();
 
@@ -91,13 +97,10 @@ export default function QrLogin() {
   useEffect(() => {
     console.log("Component mounted, initializing socket and fetching QR code");
     // Khởi tạo socket khi component mount với namespace /qr-code
-    const socket = io(
-      `${process.env.NEXT_PUBLIC_WS_URL || "http://localhost:3000"}/qr-code`,
-      {
-        transports: ["websocket"],
-        autoConnect: true,
-      },
-    );
+    const socket = io(`${socketBaseUrl}/qr-code`, {
+      transports: ["websocket"],
+      autoConnect: true,
+    });
 
     // Initialize socket debug listeners
     console.log("Socket initialized with namespace /qr-code");
@@ -125,7 +128,7 @@ export default function QrLogin() {
       console.log("Closing socket connection");
       socket.close();
     };
-  }, []);
+  }, [socketBaseUrl]);
 
   // Handle QR token changes and subscribe to events
   useEffect(() => {
@@ -133,13 +136,10 @@ export default function QrLogin() {
     if (!qrToken) return;
 
     // Create a new socket connection for this token
-    const socket = io(
-      `${process.env.NEXT_PUBLIC_WS_URL || "http://localhost:3000"}/qr-code`,
-      {
-        transports: ["websocket"],
-        autoConnect: true,
-      },
-    );
+    const socket = io(`${socketBaseUrl}/qr-code`, {
+      transports: ["websocket"],
+      autoConnect: true,
+    });
 
     if (!socket) {
       console.error("Could not create socket");
@@ -294,8 +294,9 @@ export default function QrLogin() {
     // Cleanup when token changes
     return () => {
       unsubscribeFromQrEvents(socket, qrToken);
+      socket.close();
     };
-  }, [qrToken, router, setAuth, setTokens, isQrExpired]);
+  }, [qrToken, router, setAuth, setTokens, isQrExpired, socketBaseUrl]);
 
   // Tính và format thời gian còn lại
   const [timeLeft, setTimeLeft] = useState<number>(300); // Mặc định 5 phút (300 giây)
@@ -528,8 +529,8 @@ export default function QrLogin() {
             Quét mã để đăng nhập
           </p>
           <p className="text-sm text-gray-500 px-4">
-            Mở ứng dụng ZaloLite trên điện thoại và quét mã này để đăng nhập
-            nhanh chóng
+            Mở ứng dụng Vodka trên điện thoại và quét mã này để đăng nhập nhanh
+            chóng
           </p>
         </div>
       </div>
