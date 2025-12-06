@@ -92,7 +92,7 @@ export default function QrLogin() {
     console.log("Component mounted, initializing socket and fetching QR code");
     // Khởi tạo socket khi component mount với namespace /qr-code
     const socket = io(
-      `${process.env.NEXT_PUBLIC_WS_URL || "https://zalo-like.vercel.app"}/qr-code`,
+      `${process.env.NEXT_PUBLIC_WS_URL || "http://localhost:3000"}/qr-code`,
       {
         transports: ["websocket"],
         autoConnect: true,
@@ -134,7 +134,7 @@ export default function QrLogin() {
 
     // Create a new socket connection for this token
     const socket = io(
-      `${process.env.NEXT_PUBLIC_WS_URL || "https://zalo-like.vercel.app"}/qr-code`,
+      `${process.env.NEXT_PUBLIC_WS_URL || "http://localhost:3000"}/qr-code`,
       {
         transports: ["websocket"],
         autoConnect: true,

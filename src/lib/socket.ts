@@ -46,7 +46,7 @@ export const setupSocket = (token: string) => {
   socket.auth = { token };
 
   const socketUrl =
-    process.env.NEXT_PUBLIC_SOCKET_URL || "https://zalo-like.vercel.app";
+    process.env.NEXT_PUBLIC_SOCKET_URL || "http://localhost:3000";
   console.log(`Setting socket URL to: ${socketUrl}`);
 
   // Create a new socket with updated options
@@ -160,7 +160,7 @@ export const setupCallSocket = (token: string) => {
 
   // Get the socket URL
   const baseSocketUrl =
-    process.env.NEXT_PUBLIC_SOCKET_URL || "https://zalo-like.vercel.app";
+    process.env.NEXT_PUBLIC_SOCKET_URL || "http://localhost:3000";
   const callSocketUrl = `${baseSocketUrl}/call`;
   console.log(`Setting up call socket at URL: ${callSocketUrl}`);
 

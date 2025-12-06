@@ -20,7 +20,7 @@ export const useFriendSocket = () => {
 
     // Create socket connection to the friends namespace
     const socket = io(
-      `${process.env.NEXT_PUBLIC_SOCKET_URL || "https://zalo-like.vercel.app"}/friends`,
+      `${process.env.NEXT_PUBLIC_SOCKET_URL || "http://localhost:3000"}/friends`,
       {
         auth: { token: accessToken },
         transports: ["websocket"],

@@ -215,7 +215,7 @@ export async function getGroupById(groupId: string, token?: string) {
 
     if (token) {
       // If token is provided, use fetch with the token
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "https://zalo-like.vercel.app";
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
       const fullUrl = `${apiUrl}/api/v1/groups/${groupId}`;
 
       console.log(`Making authenticated request to: ${fullUrl}`);

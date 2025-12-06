@@ -26,7 +26,7 @@ export async function fetchUserById(
       const customAxiosInstance = {
         get: async (url: string) => {
           const apiUrl =
-            process.env.NEXT_PUBLIC_API_URL || "https://zalo-like.vercel.app";
+            process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
           const fullUrl = `${apiUrl}/api/v1${url}`;
 
           console.log(`Making authenticated request to: ${fullUrl}`);
